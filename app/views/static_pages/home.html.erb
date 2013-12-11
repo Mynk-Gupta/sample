@@ -1,2 +1,11 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<% provide(:title, 'Home') %>
+		
+		<title><%= yield(:title) %></title>
+
+
+	<h1>The First Page</h1>
+		<p>MY HOME PAGE</p>
+
+		<a href="http://railstutorials.org/">Ruby On Rails</a>
+		<br>sample application
+
