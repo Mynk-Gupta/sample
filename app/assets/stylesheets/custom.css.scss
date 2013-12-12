@@ -27,46 +27,51 @@ textarea {
 .center h1 {
   margin-bottom: 10px;
 }
-h1,h2,h3,h4
-{
-	line-height: 1;
-	font-family: Comic Sans MS;
-}
-h1{
-	font-size: 60px;
-	letter-spacing: 0px;
-	margin-bottom: 30px;
-	text-align: center;
-}
-h2{
-	font-size: 1.2em;
-	letter-spacing: -1px;
-	margin-bottom: 30px;
-	text-align: center;
-	font-weight: normal;
-	color: #999;
-}
-p{
-	font-size: 1.1em;
-	line-height: 1,7em;
-}
+	h1,h2,h3,h4
+	{
+		line-height: 1;
+		font-family: Comic Sans MS;
+	}
+	h1
+	{
+		font-size: 60px;
+		letter-spacing: 0px;
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	h2
+	{
+		font-size: 1.2em;
+		letter-spacing: -1px;
+		margin-bottom: 30px;
+		text-align: center;
+		font-weight: normal;
+		color: #999;
+	}
+	p
+	{
+		font-size: 1.1em;
+		line-height: 1,7em;
+	}
 
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  line-height: 1;
-}
+	#logo 
+	{
+	  float: left;
+	  margin-right: 10px;
+	  font-size: 1.7em;
+	  color: #fff;
+	  text-transform: uppercase;
+	  letter-spacing: -1px;
+	  padding-top: 9px;
+	  font-weight: bold;
+	  line-height: 1;
+	}
 
-#logo:hover {
-  color: #fff;
-  text-decoration: line-through;
-}
+	#logo:hover 
+	{
+	  color: #fff;
+	  text-decoration: line-through;
+	}
 
 footer 
 {
@@ -74,7 +79,8 @@ footer
 	  padding-top: 5px;
 	  border-top: 1px solid #eaeaea;
 	  color: #999;
-	 a {
+	 a 
+	{
 	  color: #555;
 	  &:hover 
 	{
@@ -83,16 +89,55 @@ footer
 }
 
 
-small {
-  float: left;
- }
+	small 
+		{
+		  float: left;
+		}
 
- ul {
-  float: right;
-  list-style: none;
- li {
+	ul 
+	{
+		  float: right;
+		  list-style: none;
+		 li 
+		{
+		  float: left;
+		  margin-left: 10px;
+	    }
+	}
+}
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.debug_dump {
+  clear: both;
   float: left;
-  margin-left: 10px;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+#error_explanation {
+  color: #9999;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
   }
- }
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
 }
