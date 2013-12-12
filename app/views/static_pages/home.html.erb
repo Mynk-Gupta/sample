@@ -2,10 +2,15 @@
 		
 		<title><%= yield(:title) %></title>
 
-
-	<h1>The First Page</h1>
-		<p>MY HOME PAGE</p>
-
+<div class="centre hero-unit">
+	 <h1>The First Page</h1>
+		
+	<h2>
+		This is the home page for
 		<a href="http://railstutorials.org/">Ruby On Rails</a>
 		<br>sample application
+	</h2>
+	<%=link_to "sign up now","http://localhost:3000/signup",class:"btn btn-large btn primary"%>
+</div>
+<%=link_to image_tag("Ruby.png",alt: "rails"),'http://rubyonrails.org/' %>
 
