@@ -15,3 +15,8 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+	console.log("Ready Function Testing");
+	alert('alert test first time');
+})
